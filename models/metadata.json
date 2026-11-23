@@ -1,0 +1,205 @@
+{
+  "fitur_input": [
+    "alcohol",
+    "malic_acid",
+    "ash",
+    "alcalinity_of_ash",
+    "magnesium",
+    "total_phenols",
+    "flavanoids",
+    "nonflavanoid_phenols",
+    "proanthocyanins",
+    "color_intensity",
+    "hue",
+    "od280_od315_of_diluted_wines",
+    "proline"
+  ],
+  "kelas": [
+    "Kultivar A",
+    "Kultivar B",
+    "Kultivar C"
+  ],
+  "model_terpilih": "SVM (RBF)",
+  "mode_fitur": "rasio_ringkas",
+  "rentang_fitur": {
+    "alcohol": [
+      11.03,
+      14.83,
+      13.01
+    ],
+    "malic_acid": [
+      0.74,
+      5.8,
+      1.81
+    ],
+    "ash": [
+      1.36,
+      3.22,
+      2.36
+    ],
+    "alcalinity_of_ash": [
+      10.6,
+      30.0,
+      19.5
+    ],
+    "magnesium": [
+      70.0,
+      162.0,
+      97.0
+    ],
+    "total_phenols": [
+      0.98,
+      3.88,
+      2.335
+    ],
+    "flavanoids": [
+      0.34,
+      3.74,
+      2.135
+    ],
+    "nonflavanoid_phenols": [
+      0.13,
+      0.63,
+      0.34
+    ],
+    "proanthocyanins": [
+      0.42,
+      3.58,
+      1.56
+    ],
+    "color_intensity": [
+      1.28,
+      13.0,
+      4.64
+    ],
+    "hue": [
+      0.48,
+      1.71,
+      0.96
+    ],
+    "od280_od315_of_diluted_wines": [
+      1.27,
+      3.92,
+      2.78
+    ],
+    "proline": [
+      278.0,
+      1515.0,
+      673.5
+    ]
+  },
+  "metrik_test": {
+    "accuracy": 0.9722222222222222,
+    "f1_macro": 0.9709618874773139,
+    "precision_macro": 0.9777777777777779,
+    "recall_macro": 0.9666666666666667
+  },
+  "confusion_matrix": [
+    [
+      12,
+      0,
+      0
+    ],
+    [
+      0,
+      14,
+      0
+    ],
+    [
+      0,
+      1,
+      9
+    ]
+  ],
+  "classification_report": {
+    "Kultivar A": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 12.0
+    },
+    "Kultivar B": {
+      "precision": 0.9333333333333333,
+      "recall": 1.0,
+      "f1-score": 0.9655172413793104,
+      "support": 14.0
+    },
+    "Kultivar C": {
+      "precision": 1.0,
+      "recall": 0.9,
+      "f1-score": 0.9473684210526315,
+      "support": 10.0
+    },
+    "accuracy": 0.9722222222222222,
+    "macro avg": {
+      "precision": 0.9777777777777779,
+      "recall": 0.9666666666666667,
+      "f1-score": 0.9709618874773139,
+      "support": 36.0
+    },
+    "weighted avg": {
+      "precision": 0.974074074074074,
+      "recall": 0.9722222222222222,
+      "f1-score": 0.9719701552732407,
+      "support": 36.0
+    }
+  },
+  "hasil_cv": [
+    {
+      "fitur": "rasio_ringkas",
+      "model": "SVM (RBF)",
+      "cv_f1_macro_mean": 0.9958830409356725,
+      "cv_f1_macro_std": 0.01049622730283428
+    },
+    {
+      "fitur": "asli+rasio",
+      "model": "SVM (RBF)",
+      "cv_f1_macro_mean": 0.9958830409356725,
+      "cv_f1_macro_std": 0.01049622730283428
+    },
+    {
+      "fitur": "asli+rasio",
+      "model": "Logistic Regression",
+      "cv_f1_macro_mean": 0.991292240262492,
+      "cv_f1_macro_std": 0.014456293834383365
+    },
+    {
+      "fitur": "rasio_ringkas",
+      "model": "Logistic Regression",
+      "cv_f1_macro_mean": 0.991292240262492,
+      "cv_f1_macro_std": 0.014456293834383365
+    },
+    {
+      "fitur": "asli",
+      "model": "SVM (RBF)",
+      "cv_f1_macro_mean": 0.9886255408341827,
+      "cv_f1_macro_std": 0.020300706080477987
+    },
+    {
+      "fitur": "asli",
+      "model": "Logistic Regression",
+      "cv_f1_macro_mean": 0.9814960196222816,
+      "cv_f1_macro_std": 0.021365543507164304
+    },
+    {
+      "fitur": "asli",
+      "model": "Random Forest",
+      "cv_f1_macro_mean": 0.9812343787340422,
+      "cv_f1_macro_std": 0.02543725014358075
+    },
+    {
+      "fitur": "asli+rasio",
+      "model": "Random Forest",
+      "cv_f1_macro_mean": 0.9701052521892025,
+      "cv_f1_macro_std": 0.027593835439706314
+    },
+    {
+      "fitur": "rasio_ringkas",
+      "model": "Random Forest",
+      "cv_f1_macro_mean": 0.9663948625902677,
+      "cv_f1_macro_std": 0.027399217360225752
+    }
+  ],
+  "n_train": 142,
+  "n_test": 36
+}
